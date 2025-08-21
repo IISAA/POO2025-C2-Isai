@@ -49,9 +49,6 @@ public class AsistenciaApplication extends Application {
 		Screen screen = Screen.getPrimary();
 		Rectangle2D bounds = screen.getBounds();
 
-		Label label = new Label("Hola soy Isai");
-		StackPane parent = new StackPane(label);  // Contenedor con el texto
-
 		stage.setScene(new Scene(parent,bounds.getWidth(), bounds.getHeight()- 80));
 		//stage.show();
 		stage.setTitle("Spring Java-FX");

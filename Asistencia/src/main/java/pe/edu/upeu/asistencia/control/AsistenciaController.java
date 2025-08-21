@@ -11,7 +11,11 @@ public class AsistenciaController {
     @FXML
     private Label idMsg;
     @FXML
+    private Label idMsg1;
+    @FXML
     TextField txtDato;
+    @FXML
+    TextField txtDato1;
 
     //@FXML Button btnEnviar;
 
@@ -19,5 +23,6 @@ public class AsistenciaController {
     void enviar(){
         System.out.println("Enviando asistencia");
         idMsg.setText(txtDato.getText());
+        idMsg1.setText(txtDato1.getText());
     }
 }
