@@ -12,5 +12,6 @@
       <Label fx:id="" layoutX="174.0" layoutY="20.0" text="Asistencia" />
       <Label fx:id="idMsg" layoutX="235.0" layoutY="167.0" text="Nombres" />
       <Label fx:id="idMsg1" layoutX="235.0" layoutY="200.0" text="Apellidos" />
+      <Button layoutX="385.0" layoutY="100.0" mnemonicParsing="false" onAction="#regEstudiante" text="Agregar" />
    </children>
 </AnchorPane>
