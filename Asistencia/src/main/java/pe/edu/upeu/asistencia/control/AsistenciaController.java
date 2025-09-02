@@ -29,14 +29,14 @@ public class AsistenciaController {
     //@FXML Button btnEnviar;
 
     @FXML
-    void enviar(){
+    void enviar() {
         System.out.println("Enviando asistencia");
         idMsg.setText(txtDato.getText());
         idMsg1.setText(txtDato1.getText());
     }
 
     @FXML
-    public void regEstudiante(){
+    public void regEstudiante() {
         Participante estudiante = new Participante();
         estudiante.setNombre(new SimpleStringProperty(txtDato.getText()));
         estudiante.setEstado(new SimpleBooleanProperty(true));
@@ -47,8 +47,8 @@ public class AsistenciaController {
     }
 
     @FXML
-    void listarEstudiantes(){
-        for(Participante e: participanteServicioI.findAll()){
+    void listarEstudiantes() {
+        for (Participante e : participanteServicioI.findAll()) {
             System.out.println(e.getNombre());
         }
     }
