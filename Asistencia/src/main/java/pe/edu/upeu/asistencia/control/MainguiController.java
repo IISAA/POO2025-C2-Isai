@@ -6,7 +6,9 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.Mnemonic;
 import javafx.scene.layout.BorderPane;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -27,14 +29,44 @@ public class MainguiController {
     TabPane tabPane;
     @FXML
     MenuItem menuItem1, menuItemC;
+
+    Menu menuEstilos = new Menu("Cambiar estilos");
+    ComboBox<String> comboEstilo = new ComboBox<>();
+    CustomMenuItem customMenuItem = new CustomMenuItem(comboEstilo);
+
     @Autowired
     ApplicationContext context;
 
     @FXML
     public void initialize() {
+        comboEstilo.getItems().addAll("Estilo por defecto", "Estilo oscuro", "Estilo rosado", "Estilo verde");
+        comboEstilo.setOnAction(e -> cambiarEstilo());
+        customMenuItem.setHideOnClick(false);
+        menuEstilos.getItems().add(customMenuItem);
+        menuBar.getMenus().addAll(menuEstilos);
+
         MenuItemListener mIL = new MenuItemListener(); //instancia de la clase interna MIL
         menuItem1.setOnAction(mIL::handle); // asiganción como manejadora del evento OnAction
         menuItemC.setOnAction(mIL::handle); // en los menús[mI1 y mIC]
+    }
+
+    public void cambiarEstilo() {
+        String estilo = comboEstilo.getSelectionModel().getSelectedItem();
+        Scene scene = bp.getScene();
+        scene.getStylesheets().clear();
+        switch (estilo) {
+            case "Estilo oscuro":
+                scene.getStylesheets().add(getClass().getResource("/css/estilo-oscuro.css").toExternalForm());
+                break;
+            case "Estilo rosado":
+                scene.getStylesheets().add(getClass().getResource("/css/estilo-rosado.css").toExternalForm());
+                break;
+            case "Estilo verde":
+                scene.getStylesheets().add(getClass().getResource("/css/estilo-verde.css").toExternalForm());
+                break;
+            default:
+                break;
+        }
     }
 
     class MenuItemListener { // clase interna para manejar eventos

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.asistencia.control.ParticipanteController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.asistencia.control.ParticipanteController">
    <children>
-      <VBox maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
             <AnchorPane>
                <children>
@@ -77,9 +78,12 @@
                               </Button>
                            </children>
                         </GridPane>
-                        <AnchorPane>
+                        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                            <children>
-                              <TableView fx:id="tableView" layoutX="14.0" layoutY="23.0" />
+                              <TableView fx:id="tableView" layoutX="14.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="700.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></TableView>
                            </children>
                         </AnchorPane>
                      </children>
