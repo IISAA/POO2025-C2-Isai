@@ -7,9 +7,13 @@ import java.util.List;
 public interface ParticipanteServicioI {
     // métodos CRUD
     void save(Participante estudiante); //C
+
     List<Participante> findAll(); //R
-    void update(Participante estudiante, int index); //U
-    void delete(int index); //D
+
+    Participante update(Participante estudiante); //U
+
+    void delete(String dni); //D
+
     Participante findById(int index); // SEARCH
 
 }

@@ -5,6 +5,7 @@ import java.sql.*;
 public class ConDB {
     static Connection conexion;
 
+    // método establecer conexión
     public static Connection getConexion() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -21,7 +22,7 @@ public class ConDB {
         return conexion;
     }
 
-    // método cerrar
+    // método cerrar conexión
     public static void closeConexion() {
         if (conexion != null) {
             try {
