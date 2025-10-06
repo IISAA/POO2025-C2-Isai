@@ -38,8 +38,8 @@ public class AsistenciaController {
     @FXML
     public void regEstudiante() {
         Participante estudiante = new Participante();
-        estudiante.setNombre(new SimpleStringProperty(txtDato.getText()));
-        estudiante.setEstado(new SimpleBooleanProperty(true));
+        //estudiante.setNombre(new SimpleStringProperty(txtDato.getText()));
+        //estudiante.setEstado(new SimpleBooleanProperty(true));
 
         participanteServicioI.save(estudiante);
 
