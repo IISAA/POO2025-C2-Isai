@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Participantes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Lista de Participantes</h2>
+    <a class="btn btn-success mb-3" th:href="@{/participantes/new}">Agregar Participante</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Carrera</th>
+            <th>Tipo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p : ${participantes}">
+            <td th:text="${p.dni}"></td>
+            <td th:text="${p.nombre}"></td>
+            <td th:text="${p.apellidos}"></td>
+            <td th:text="${p.carrera}"></td>
+            <td th:text="${p.tipoParticipante}"></td>
+            <td>
+                <span th:text="${p.estado} ? 'Activo' : 'Inactivo'"></span>
+            </td>
+            <td>
+                <a class="btn btn-primary btn-sm" th:href="@{/participantes/edit/{dni}(dni=${p.dni})}">Editar</a>
+                <a class="btn btn-danger btn-sm" th:href="@{/participantes/delete/{dni}(dni=${p.dni})}">Eliminar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
