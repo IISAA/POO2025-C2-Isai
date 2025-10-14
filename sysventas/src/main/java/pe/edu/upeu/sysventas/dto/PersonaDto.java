@@ -1,0 +1,12 @@
+package pe.edu.upeu.sysventas.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class PersonaDto {
+    String dni, nombre, apellidoPaterno, apellidoMaterno;
+}
