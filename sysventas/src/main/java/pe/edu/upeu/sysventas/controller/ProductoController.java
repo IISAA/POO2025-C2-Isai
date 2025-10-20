@@ -277,7 +277,7 @@ public class ProductoController {
                         erroresOrdenados.put(campo, v.getMessage());
                         Control control = campos.get(campo);
                         //Aplica el estilo de error si no lo tiene
-                        if (control != null && !control.getStyleClass().contains("text-fielderror")) {
+                        if (control != null && !control.getStyleClass().contains("text-field-error")) {
                             control.getStyleClass().add("text-field-error");
                         }
                         //Guarda el primer control con error para enfocar después
