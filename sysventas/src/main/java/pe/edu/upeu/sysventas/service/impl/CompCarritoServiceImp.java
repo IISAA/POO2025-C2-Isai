@@ -24,4 +24,9 @@ public class CompCarritoServiceImp extends CrudGenericoServiceImp<CompCarrito, L
     public List<ModeloDataAutocomplet> listAutoCompletCliente() {
         return List.of();
     }
+
+    @Override
+    public CompCarrito update(CompCarrito entity) {
+        return null;
+    }
 }

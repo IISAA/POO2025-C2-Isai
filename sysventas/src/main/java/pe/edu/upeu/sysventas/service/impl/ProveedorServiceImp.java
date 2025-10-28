@@ -16,4 +16,9 @@ public class ProveedorServiceImp extends CrudGenericoServiceImp<Proveedor, Long>
     protected ICrudGenericoRepository<Proveedor, Long> getRepo() {
         return proveedorRepository;
     }
+
+    @Override
+    public Proveedor update(Proveedor entity) {
+        return null;
+    }
 }

@@ -16,4 +16,9 @@ public class CompraServiceImp extends CrudGenericoServiceImp<Compra, Long> imple
     protected ICrudGenericoRepository<Compra, Long> getRepo() {
         return compraRepository;
     }
+
+    @Override
+    public Compra update(Compra entity) {
+        return null;
+    }
 }

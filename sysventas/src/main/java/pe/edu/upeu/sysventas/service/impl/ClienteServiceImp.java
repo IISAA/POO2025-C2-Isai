@@ -42,4 +42,8 @@ public class ClienteServiceImp extends CrudGenericoServiceImp<Cliente, Long> imp
         return listarclientes;
     }
 
+    @Override
+    public Cliente update(Cliente entity) {
+        return null;
+    }
 }

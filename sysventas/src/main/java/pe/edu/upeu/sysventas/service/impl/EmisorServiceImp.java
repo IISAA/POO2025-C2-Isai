@@ -16,4 +16,9 @@ public class EmisorServiceImp extends CrudGenericoServiceImp<Emisor, Long> imple
     protected ICrudGenericoRepository<Emisor, Long> getRepo() {
         return emisorRepository;
     }
+
+    @Override
+    public Emisor update(Emisor entity) {
+        return null;
+    }
 }

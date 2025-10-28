@@ -36,4 +36,9 @@ public class CategoriaServiceImp extends CrudGenericoServiceImp<Categoria, Long>
         }
         return listar;
     }
+
+    @Override
+    public Categoria update(Categoria entity) {
+        return null;
+    }
 }

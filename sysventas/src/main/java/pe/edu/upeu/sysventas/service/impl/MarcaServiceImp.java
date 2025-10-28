@@ -34,4 +34,8 @@ public class MarcaServiceImp extends CrudGenericoServiceImp<Marca, Long> impleme
         return listar;
     }
 
+    @Override
+    public Marca update(Marca entity) {
+        return null;
+    }
 }

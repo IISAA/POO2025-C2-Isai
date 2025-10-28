@@ -33,4 +33,9 @@ public class UnidadMedidaServiceImp extends CrudGenericoServiceImp<UnidadMedida,
         }
         return listar;
     }
+
+    @Override
+    public UnidadMedida update(UnidadMedida entity) {
+        return null;
+    }
 }

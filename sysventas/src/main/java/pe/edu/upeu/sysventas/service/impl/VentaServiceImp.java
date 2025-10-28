@@ -65,4 +65,8 @@ public class VentaServiceImp extends CrudGenericoServiceImp<Venta, Long> impleme
                 dataSource.getConnection());
     }
 
+    @Override
+    public Venta update(Venta entity) {
+        return null;
+    }
 }

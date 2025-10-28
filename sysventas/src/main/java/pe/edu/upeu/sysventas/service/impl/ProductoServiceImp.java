@@ -45,8 +45,7 @@ public class ProductoServiceImp implements ProductoIService {
     }
 
     @Override
-    public List<ModeloDataAutocomplet> listAutoCompletProducto(String
-                                                                       nombre) {
+    public List<ModeloDataAutocomplet> listAutoCompletProducto(String nombre) {
         List<ModeloDataAutocomplet> listarProducto = new ArrayList<>();
         try {
             for (Producto producto :

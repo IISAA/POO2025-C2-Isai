@@ -17,4 +17,9 @@ public class PerfilServiceImp extends CrudGenericoServiceImp<Perfil, Long> imple
     protected ICrudGenericoRepository<Perfil, Long> getRepo() {
         return perfilRepository;
     }
+
+    @Override
+    public Perfil update(Perfil entity) {
+        return null;
+    }
 }

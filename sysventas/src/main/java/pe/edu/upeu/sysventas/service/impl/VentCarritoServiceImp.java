@@ -30,4 +30,8 @@ public class VentCarritoServiceImp extends CrudGenericoServiceImp<VentCarrito, L
         ventCarritoRepository.deleteByDniruc(dniruc);
     }
 
+    @Override
+    public VentCarrito update(VentCarrito entity) {
+        return null;
+    }
 }
