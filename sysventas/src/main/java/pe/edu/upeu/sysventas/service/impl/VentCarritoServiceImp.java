@@ -6,13 +6,13 @@ import org.springframework.transaction.annotation.Transactional;
 import pe.edu.upeu.sysventas.model.VentCarrito;
 import pe.edu.upeu.sysventas.repository.ICrudGenericoRepository;
 import pe.edu.upeu.sysventas.repository.VentCarritoRepository;
-import pe.edu.upeu.sysventas.service.IVentCarritoService;
+import pe.edu.upeu.sysventas.service.IVentaCarritoService;
 
 import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class VentCarritoServiceImp extends CrudGenericoServiceImp<VentCarrito, Long> implements IVentCarritoService {
+public class VentCarritoServiceImp extends CrudGenericoServiceImp<VentCarrito, Long> implements IVentaCarritoService {
     private final VentCarritoRepository ventCarritoRepository;
 
     @Override

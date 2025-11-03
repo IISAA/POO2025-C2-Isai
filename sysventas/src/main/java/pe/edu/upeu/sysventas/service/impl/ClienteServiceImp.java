@@ -15,13 +15,13 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @Service
-public class ClienteServiceImp extends CrudGenericoServiceImp<Cliente, Long> implements IClienteService {
+public class ClienteServiceImp extends CrudGenericoServiceImp<Cliente, String> implements IClienteService {
     Logger logger = LoggerFactory.getLogger(ClienteServiceImp.class);
 
     private final ClienteRepository clienteRepository;
 
     @Override
-    protected ICrudGenericoRepository<Cliente, Long> getRepo() {
+    protected ICrudGenericoRepository<Cliente, String> getRepo() {
         return clienteRepository;
     }
 

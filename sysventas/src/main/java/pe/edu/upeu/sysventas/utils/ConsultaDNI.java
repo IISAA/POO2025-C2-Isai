@@ -5,15 +5,17 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 import pe.edu.upeu.sysventas.dto.PersonaDto;
 
 import java.io.IOException;
 
-public abstract class ConsultaDNI {
+@Component
+public  class ConsultaDNI {
 
-    public PersonaDto consultarDNI(String dni){
+    public PersonaDto consultarDNI(String dni) {
 
-        PersonaDto personaDto=new PersonaDto();
+        PersonaDto personaDto = new PersonaDto();
         String url = "https://eldni.com/pe/buscar-datos-por-dni";
         try {
 
@@ -43,12 +45,13 @@ public abstract class ConsultaDNI {
                 personaDto.setApellidoPaterno(celdas.get(2).text());
                 personaDto.setApellidoMaterno(celdas.get(3).text());
             }
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return personaDto;
     }
-public static void main(String[] args) {
+
+    public static void main(String[] args) {
         //ConsultaDNI
-}
+    }
 }
